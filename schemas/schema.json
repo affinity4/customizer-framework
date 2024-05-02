@@ -1,0 +1,37 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "schema.json",
+    "title": "Customizer Framework customizer.json schema",
+    "description": "Configure Customizer Framework through a JSON file, much like how theme.json works.",
+    "type": "object",
+    "properties": {
+        "panels": {
+            "description": "Configure a new panel in the Customizer",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "$ref": "panel.json"
+            }
+        },
+        "sections": {
+            "description": "Configure a new section in the Customizer. Use this if you wish to attach a section to an existing panel which was not configured using customizer.json",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "$ref": "section.json"
+            }
+        },
+        "fields": {
+            "description": "Fields to be added to this section",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "$ref": "field.json"
+            }
+        },
+        "domain": {
+            "type": "string",
+            "description": "Domain for translations of titles, labels, descriptions, placeholders etc."
+        }
+    }
+}

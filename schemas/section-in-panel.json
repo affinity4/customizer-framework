@@ -1,0 +1,39 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "section.json",
+    "title": "Customizer Framework schema.json schema",
+    "description": "Configure a new section in the Customizer",
+    "type": "object",
+    "required": ["id", "title"],
+    "properties": {
+        "id": {
+            "description": "ID of the section (required)",
+            "type": "string"
+        },
+        "title": {
+            "description": "Title of the section (required)",
+            "type": "string"
+        },
+        "description": {
+            "description": "Description of the section (optional)",
+            "type": "string"
+        },
+        "priority": {
+            "description": "Description of the section (optional)",
+            "type": "integer",
+            "minimum": 0
+        },
+        "panel": {
+            "description": "ID of the panel this section belongs to (optional)",
+            "type": "string"
+        },
+        "fields": {
+            "description": "Fields to be added to this section",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "$ref": "field-in-panel.json"
+            }
+        }
+    }
+}

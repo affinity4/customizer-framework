@@ -1,0 +1,419 @@
+{
+    "$schema": "customizer-framework/schemas/schema.json",
+    "domain": "custom-domain",
+    "panels": [
+        {
+            "id": "customizer_framework__demo_panel",
+            "title": "Customizer Framework Demo",
+            "description": "Demo of the available Customizer Framework fields",
+            "sections": [
+                {
+                    "id": "customizer_framework__text_fields",
+                    "title": "Text Fields",
+                    "description": "Text Fields",
+                    "fields": [
+                        {
+                            "id": "customizer_framework__text",
+                            "title": "Text Field",
+                            "description": "Text field",
+                            "type": "text",
+                            "default": "I'm a default value",
+                            "input_attrs": {
+                                "placeholder": "Enter text here..."
+                            }
+                        },
+                        {
+                            "id": "customizer_framework__code_editor",
+                            "title": "Code Editor",
+                            "description": "Code Editor",
+                            "type": "code-editor",
+                            "default": "console.log('Hello World!');",
+                            "language": "javascript"
+                        },
+                        {
+                            "id": "customizer_framework__email",
+                            "title": "Email Field",
+                            "description": "Email Field",
+                            "type": "email",
+                            "default": "example@email.test",
+                            "input_attrs": {
+                                "placeholder": "Enter email here..."
+                            }
+                        },
+                        {
+                            "id": "customizer_framework__markup",
+                            "title": "Markup Editor",
+                            "description": "Markup Editor",
+                            "type": "markup",
+                            "html": "<h1>Hello World!</h1>"
+                        },
+                        {
+                            "id": "customizer_framework__url",
+                            "title": "URL Field",
+                            "description": "URL field",
+                            "type": "url",
+                            "default": "https://google.com/",
+                            "input_attrs": {
+                                "placeholder": "Enter URL here..."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "customizer_framework__textarea_fields",
+                    "title": "Textarea Fields",
+                    "description": "Textarea Fields",
+                    "fields": [
+                        {
+                            "id": "customizer_framework__textarea",
+                            "title": "TextArea Field",
+                            "description": "TextArea field",
+                            "type": "textarea",
+                            "default": "Hello World!\nNice to meet you!"
+                        },
+                        {
+                            "id": "customizer_framework__content_editor",
+                            "title": "Content Editor Field",
+                            "description": "Content Editor field",
+                            "type": "content-editor",
+                            "default": "<h1>Hello World!</h1>",
+                            "uploader": true,
+                            "toolbars": ["bold", "italic", "strikethrough", "bullist", "numlist", "blockquote", "hr", "alignleft",
+                            "aligncenter", "alignright", "link", "unlink", "wp_more", "spellchecker", "fullscreen",
+                            "wp_adv", "formatselect", "underline", "alignjustify", "forecolor", "pastetext", "removeformat",
+                            "charmap", "outdent", "indent", "undo", "redo", "wp_help"]
+                        }
+                    ]
+                },
+                {
+                    "id": "customizer_framework__numeric_fields",
+                    "title": "Numeric Fields",
+                    "description": "Numeric Fields",
+                    "fields": [
+                        {
+                            "id": "customizer_framework__numeric",
+                            "title": "Numeric Field",
+                            "description": "Numeric field",
+                            "type": "numeric",
+                            "default": 5,
+                            "input_attrs": {
+                                "placeholder": "Enter number here..."
+                            },
+                            "options": {
+                                "min": 0,
+                                "max": 10,
+                                "step": 1
+                            }
+                        },
+                        {
+                            "id": "customizer_framework__range",
+                            "title": "Range Field",
+                            "description": "Range field",
+                            "type": "range",
+                            "default": 5,
+                            "input_attrs": {
+                                "placeholder": "Enter number here..."
+                            },
+                            "options": {
+                                "min": 0,
+                                "max": 10,
+                                "step": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "customizer_framework__checkbox_fields",
+                    "title": "Checkbox Fields",
+                    "description": "Checkbox Fields",
+                    "fields": [
+                        {
+                            "id": "customizer_framework__checkbox",
+                            "title": "Checkbox Field",
+                            "description": "Checkbox Field",
+                            "type": "checkbox",
+                            "default": true,
+                            "choices": [
+                                {
+                                    "value": true,
+                                    "text": "On"
+                                },
+                                {
+                                    "value": false,
+                                    "text": "Off"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "customizer_framework__checkbox_multiple",
+                            "title": "Checkbox Multiple Field",
+                            "description": "Checkbox Multiple Field",
+                            "type": "checkbox-multiple",
+                            "default": [0, 2],
+                            "choices": [
+                                {
+                                    "value": 1,
+                                    "text": "One"
+                                },
+                                {
+                                    "value": 2,
+                                    "text": "Two"
+                                },
+                                {
+                                    "value": 3,
+                                    "text": "Three"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "customizer_framework__checkbox_pill",
+                            "title": "Checkbox Pill Field",
+                            "description": "Checkbox Pill Field",
+                            "type": "checkbox-pill",
+                            "default": true,
+                            "style": "inline",
+                            "choices": [
+                                {
+                                    "value": 1,
+                                    "text": "One"
+                                },
+                                {
+                                    "value": 2,
+                                    "text": "Two"
+                                },
+                                {
+                                    "value": 3,
+                                    "text": "Three"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "customizer_framework__switch",
+                            "title": "Switch Field",
+                            "description": "Switch Field",
+                            "type": "switch",
+                            "default": false
+                        },
+                        {
+                            "id": "customizer_framework__toggle",
+                            "title": "Toggle Field",
+                            "description": "Toggle Field",
+                            "type": "toggle",
+                            "default": false
+                        }
+                    ]
+                },
+                {
+                    "id": "customizer_framework__radio_fields",
+                    "title": "Radio Fields",
+                    "description": "Radio Fields",
+                    "fields": [
+                        {
+                            "id": "customizer_framework__button_set",
+                            "title": "Button Set Field",
+                            "description": "Button Set Field",
+                            "type": "button-set",
+                            "default": "option_1",
+                            "choices": [
+                                {
+                                    "value": "option_1",
+                                    "text": "Option 1"
+                                },
+                                {
+                                    "value": "option_2",
+                                    "text": "Option 2"
+                                },
+                                {
+                                    "value": "option_3",
+                                    "text": "Option 3"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "customizer_framework__radio",
+                            "title": "radio Field",
+                            "description": "radio Field",
+                            "type": "radio",
+                            "default": "option_1",
+                            "choices": [
+                                {
+                                    "value": "option_1",
+                                    "text": "Option 1"
+                                },
+                                {
+                                    "value": "option_2",
+                                    "text": "Option 2"
+                                },
+                                {
+                                    "value": "option_3",
+                                    "text": "Option 3"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "customizer_framework__media_fields",
+                    "title": "Media Fields",
+                    "description": "Media Fields",
+                    "fields": [
+                        {
+                            "id": "customizer_framework__audio_uploader",
+                            "title": "Audio Uploader",
+                            "description": "Audio Uploader",
+                            "type": "audio-uploader",
+                            "extensions": [
+                                "mp3"
+                            ]
+                        },
+                        {
+                            "id": "customizer_framework__file_uploader",
+                            "title": "File Uploader",
+                            "description": "File Uploader",
+                            "type": "file-uploader",
+                            "extensions": [ "pdf", "doc", "docx", "ppt", "pptx", "pps", "ppsx", "odt", "xls", "xlsx", "psd" ]
+                        },
+                        {
+                            "id": "customizer_framework__image_uploader",
+                            "title": "Image Uploader",
+                            "description": "Image Uploader",
+                            "type": "image-uploader",
+                            "extensions": ["png", "jpg", "jpeg", "ico", "gif"]
+                        },
+                        {
+                            "id": "customizer_framework__video_uploader",
+                            "title": "Video Uploader",
+                            "description": "Video Uploader",
+                            "type": "video-uploader",
+                            "extensions": ["mp4", "m4v",  "mov", "wmv", "avi", "mpg", "ogv", "3gp", "3g2", "webm", "mkv"]
+                        }
+                    ]
+                },
+                {
+                    "id": "customizer_framework__color_fields",
+                    "title": "Color Fields",
+                    "description": "Color Fields",
+                    "fields": [
+                        {
+                            "id": "customizer_framework__color_picker",
+                            "title": "Color Picker Field",
+                            "description": "Color Picker field",
+                            "type": "color-picker",
+                            "default": "#000",
+                            "format": "hex",
+                            "opacity": 0.75
+                        },
+                        {
+                            "id": "customizer_framework__color_set",
+                            "title": "Color Set Field",
+                            "description": "Color Set field",
+                            "type": "color-set",
+                            "colors": ["#000", "#fff", "#eee"],
+                            "shape": "circle",
+                            "size": 20
+                        },
+                        {
+                            "id": "customizer_framework__color",
+                            "title": "Color Field",
+                            "description": "Color field",
+                            "type": "color",
+                            "default": "#000000"
+                        }
+                    ]
+                },
+                {
+                    "id": "customizer_framework__date_time_fields",
+                    "title": "Date & Time Fields",
+                    "description": "Date & Time Fields",
+                    "fields": [
+                        {
+                            "id": "customizer_framework__date_picker",
+                            "title": "Date Picker Field",
+                            "description": "Date Picker field",
+                            "type": "date-picker",
+                            "default": ["2024-01-01", "2024-01-31"],
+                            "mode": "range",
+                            "enable_time": true
+                        },
+                        {
+                            "id": "customizer_framework__time_picker",
+                            "title": "Time Picker Field",
+                            "description": "Time Picker field",
+                            "type": "time-picker",
+                            "default": "15:00",
+                            "military_format": true
+                        }
+                    ]
+                },
+                {
+                    "id": "customizer_framework__dropdown_fields",
+                    "title": "Dropdown Fields",
+                    "description": "Dropdown Fields",
+                    "fields": [
+                        {
+                            "id": "customizer_framework__dropdown_custom_posts",
+                            "title": "Dropdown Custom Posts Field",
+                            "description": "Dropdown Custom Posts field",
+                            "type": "dropdown-custom-post",
+                            "default": 1,
+                            "post_type": "custom_post_type",
+                            "order": "asc"
+                        },
+                        {
+                            "id": "customizer_framework__dropdown_page",
+                            "title": "Dropdown Page Field",
+                            "description": "Dropdown Page field",
+                            "type": "dropdown-page",
+                            "default": 1,
+                            "order": "asc"
+                        },
+                        {
+                            "id": "customizer_framework__dropdown_post",
+                            "title": "Dropdown Post Field",
+                            "description": "Dropdown Post field",
+                            "type": "dropdown-post",
+                            "default": 1,
+                            "order": "asc"
+                        },
+                        {
+                            "id": "customizer_framework__select",
+                            "title": "Select Field",
+                            "description": "Select field",
+                            "type": "select",
+                            "default": "option_1",
+                            "choices": [
+                                {
+                                    "value": "option_1",
+                                    "text": "Option 1"
+                                },
+                                {
+                                    "value": "option_2",
+                                    "text": "Option 2"
+                                },
+                                {
+                                    "value": "option_3",
+                                    "text": "Option 3"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "customizer_framework__misc_fields",
+                    "title": "Misc Fields",
+                    "description": "Misc Fields",
+                    "fields": [
+                        {
+                            "id": "customizer_framework__size",
+                            "title": "Size Field",
+                            "description": "Size field",
+                            "type": "size",
+                            "default": "2rem",
+                            "units": ["px", "em", "ex", "ch", "rem", "vw", "vh", "vmin", "vmax", "%"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
