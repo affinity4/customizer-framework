@@ -4,7 +4,7 @@
     "title": "Customizer Framework field.json schema",
     "description": "Configure a new field in the Customizer",
     "type": "object",
-    "required": ["id", "section"],
+    "required": ["id", "type", "section"],
     "oneOf": [
         {
             "properties": {

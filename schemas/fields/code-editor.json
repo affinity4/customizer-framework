@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "fields/code-editor.json",
+    "title": "Customizer Framework Code Editor field schema",
+    "description": "Configure a Code Editor field in the Customizer",
+    "type": "object",
+    "required": ["language"],
+    "properties": {
+        "default": {
+            "$ref": "defs/default-string.json"
+        },
+        "language": {
+            "description": "Language of the code (html, css, javscript, php)",
+            "type": "string",
+            "enum": ["html", "css", "javascript", "php"]
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "fields/defs/input-attrs.json",
+    "description": "Input attributes to be added to the text input e.g. placeholder",
+    "type": "object",
+    "minProperties": 1,
+    "additionalProperties": true
+}

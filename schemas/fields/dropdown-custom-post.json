@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "fields/dropdown-custom-post.json",
+    "title": "Customizer Framework Dropdown Custom Post field schema",
+    "description": "Configure an Dropdown Custom Post field in the Customizer",
+    "type": "object",
+    "required": ["post_type"],
+    "properties": {
+        "default": {
+            "$ref": "defs/default-string.json"
+        },
+        "post_type": {
+            "description": "Custom post type. Must be an existing custom post type.\n\nType: string\nDefault: ''",
+            "type": "string",
+            "default": false
+        },
+        "order": {
+            "$ref": "defs/order.json"
+        }
+    }
+}

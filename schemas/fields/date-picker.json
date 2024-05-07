@@ -1,0 +1,44 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "fields/date-picker.json",
+    "title": "Customizer Framework Date Picker field schema",
+    "description": "Configure an Date Picker field in the Customizer",
+    "type": "object",
+    "properties": {
+        "default": {
+            "title": "Default value",
+            "description": "Default value of the field.\nIf `mode` is single, takes a string e.g. 2024-02-31.\nIf `mode` is 'range', then default must be an array with 2 dates e.g. [\"2024-01-31\", \"2024-02-28\"]",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "pattern": "^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])$"
+                },
+                {
+                    "type": "array",
+                    "additionalItems": false,
+                    "items": [
+                        {
+                            "type": "string",
+                            "pattern": "^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])$"
+                        },
+                        {
+                            "type": "string",
+                            "pattern": "^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])$"
+                        }
+                    ]
+                }
+            ]
+        },
+        "mode": {
+            "description": "Set the mode which this date picker accepts user input. ['single', 'range']. Type: string. Default: single",
+            "type": "string",
+            "enum": ["single", "range"],
+            "default": "single"
+        },
+        "enable_time": {
+            "description": "Does this date picker allow setting time. Type: boolean. Default: false",
+            "type": "boolean",
+            "default": false
+        }
+    }
+}

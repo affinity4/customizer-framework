@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "fields/checkbox-pill.json",
+    "title": "Customizer Framework Checkbox Pill field schema",
+    "description": "Configure a Checkbox Pill field in the Customizer",
+    "type": "object",
+    "required": ["choices"],
+    "properties": {
+        "default": {
+            "$ref": "defs/default-mixed.json"
+        },
+        "choices": {
+            "$ref": "defs/choices.json"
+        },
+        "style": {
+            "description": "Display checkbox pills as `inline` or `list`",
+            "type": "string",
+            "enum": ["inline", "list"]
+        }
+    }
+}

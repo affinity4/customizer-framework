@@ -1,5 +1,5 @@
 {
-    "$schema": "customizer-framework/schemas/schema.json",
+    "$schema": "schemas/schema.json",
     "domain": "custom-domain",
     "panels": [
         {
@@ -170,7 +170,7 @@
                             "title": "Checkbox Pill Field",
                             "description": "Checkbox Pill Field",
                             "type": "checkbox-pill",
-                            "default": true,
+                            "default": 1,
                             "style": "inline",
                             "choices": [
                                 {
@@ -192,7 +192,7 @@
                             "title": "Switch Field",
                             "description": "Switch Field",
                             "type": "switch",
-                            "default": false
+                            "default": true
                         },
                         {
                             "id": "customizer_framework__toggle",
@@ -262,9 +262,7 @@
                             "title": "Audio Uploader",
                             "description": "Audio Uploader",
                             "type": "audio-uploader",
-                            "extensions": [
-                                "mp3"
-                            ]
+                            "extensions": ["mp3"]
                         },
                         {
                             "id": "customizer_framework__file_uploader",
@@ -309,7 +307,7 @@
                             "description": "Color Set field",
                             "type": "color-set",
                             "colors": ["#000", "#fff", "#eee"],
-                            "shape": "circle",
+                            "shape": "square",
                             "size": 20
                         },
                         {
@@ -355,7 +353,7 @@
                             "title": "Dropdown Custom Posts Field",
                             "description": "Dropdown Custom Posts field",
                             "type": "dropdown-custom-post",
-                            "default": 1,
+                            "default": "project",
                             "post_type": "custom_post_type",
                             "order": "asc"
                         },

@@ -1,0 +1,7 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "fields/defs/default-array.json",
+    "title": "Default value",
+    "description": "Default value of the field. Type: array (optional)",
+    "type": "array"
+}

@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "fields/url.json",
+    "title": "Customizer Framework Text field schema",
+    "description": "Configure an Text field in the Customizer",
+    "type": "object",
+    "properties": {
+        "default": {
+            "$ref": "defs/default-url.json"
+        },
+        "input_attrs": {
+            "$ref": "defs/input-attrs.json"
+        }
+    }
+}

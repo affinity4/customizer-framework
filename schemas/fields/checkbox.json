@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "fields/button-set.json",
-    "title": "Customizer Framework Button Set field schema",
-    "description": "Configure a Button Set field in the Customizer",
+    "$id": "fields/checkbox.json",
+    "title": "Customizer Framework Checkbox field schema",
+    "description": "Configure a Checkbox field in the Customizer",
     "type": "object",
     "required": ["choices"],
     "properties": {

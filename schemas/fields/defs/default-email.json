@@ -1,0 +1,8 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "fields/defs/default-email.json",
+    "title": "Default value",
+    "description": "Default value of the field. Type: string (optional)",
+    "type": "string",
+    "format": "email"
+}

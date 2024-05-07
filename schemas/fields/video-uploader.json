@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "fields/video-uploader.json",
+    "title": "Customizer Framework Video Uploader field schema",
+    "description": "Configure an Video Uploader field in the Customizer",
+    "type": "object",
+    "required": ["extensions"],
+    "properties": {
+        "default": {
+            "$ref": "defs/default-number.json"
+        },
+        "extensions": {
+            "description": "Allowed extendsion types e.g. mp4, m4v, mov, wmv, avi, mpg, ogv, 3gp, 3g2, webm, mkv",
+            "type": "array",
+            "uniqueItems": true,
+            "minItems": 1,
+            "additionalItems": false,
+            "items": {
+                "type": "string",
+                "enum": ["mp4", "m4v", "mov", "wmv", "avi", "mpg", "ogv", "3gp", "3g2", "webm", "mkv"]
+            }
+        }
+    }
+}

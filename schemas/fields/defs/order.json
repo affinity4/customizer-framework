@@ -1,0 +1,8 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "fields/defs/order.json",
+    "description": "Sets the order to ascending and descending.\nValid orders are `asc` and `desc`\n\nType: string\nDefault: asc",
+    "type": "string",
+    "enum": ["asc", "desc"],
+    "default": "asc"
+}

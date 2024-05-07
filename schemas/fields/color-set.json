@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "fields/color-set.json",
+    "title": "Customizer Framework Color Set field schema",
+    "description": "Configure a Color Set field in the Customizer",
+    "type": "object",
+    "required": ["colors"],
+    "properties": {
+        "default": {
+            "$ref": "defs/default-string.json"
+        },
+        "colors": {
+            "description": "Define the colors which will be available to select. Colors are in hex format e.g. [\"#000000\", \"#fefefe\"]",
+            "type": "array",
+            "items": {
+                "description": "Color in hex format",
+                "type": "string",
+                "default": false
+            }
+        },
+        "shape": {
+            "description": "Shape of each selectable colors [square, circle] (string). Default: square",
+            "type": "string",
+            "enum": ["square", "circle"],
+            "default": "square"
+        },
+        "size": {
+            "description": "Size of each selectable colors (integer). Default: 20",
+            "type": "integer",
+            "default": 20
+        }
+    }
+}

@@ -4,43 +4,373 @@
     "title": "Customizer Framework field.json schema",
     "description": "Configure a new field in the Customizer",
     "type": "object",
-    "required": ["id"],
-    "oneOf": [
+    "required": ["id", "title", "type"],
+    "additionalProperties": true,
+    "allOf": [
         {
-            "properties": {
-                "type": {
-                    "const": "audio-uploader"
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "audio-uploader"
+                    }
                 }
             },
-            "$ref": "fields/audio-uploader.json"
+            "then": {
+                "$ref": "fields/audio-uploader.json"
+            }
         },
         {
-            "properties": {
-                "type": {
-                    "const": "button-set"
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "button-set"
+                    }
                 }
             },
-            "$ref": "fields/button-set.json"
+            "then": {
+                "$ref": "fields/button-set.json"
+            }
         },
         {
-            "properties": {
-                "type": {
-                    "const": "radio"
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "checkbox-multiple"
+                    }
                 }
             },
-            "$ref": "./fields/radio.json"
+            "then": {
+                "$ref": "fields/checkbox-multiple.json"
+            }
         },
         {
-            "properties": {
-                "type": {
-                    "const": "select"
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "checkbox-pill"
+                    }
                 }
             },
-            "$ref": "./fields/select.json"
+            "then": {
+                "$ref": "fields/checkbox-pill.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "checkbox"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/checkbox.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "code-editor"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/code-editor.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "color-picker"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/color-picker.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "color-set"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/color-set.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "color"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/text.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "content-editor"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/content-editor.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "date-picker"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/date-picker.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "dropdown-custom-post"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/dropdown-custom-post.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "dropdown-page"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/dropdown-page.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "dropdown-post"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/dropdown-post.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "email"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/email.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "file-uploader"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/file-uploader.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "image-uploader"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/image-uploader.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "markup"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/markup.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "numeric"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/numeric.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "radio"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/radio.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "range"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/numeric.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "select"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/select.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "size"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/size.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "switch"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/switch.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "text"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/text.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "textarea"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/textarea.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "time-picker"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/time-picker.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "toggle"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/switch.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "url"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/url.json"
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "type": {
+                        "const": "video-uploader"
+                    }
+                }
+            },
+            "then": {
+                "$ref": "fields/video-uploader.json"
+            }
         }
     ],
     "properties": {
         "type": {
+            "description": "Type of Customizer Field e.g. button-set, color-picker, dropdown-page, radio, text, textarea",
             "type": "string",
             "enum": [
                 "audio-uploader",
@@ -51,6 +381,7 @@
                 "code-editor",
                 "color-picker",
                 "color-set",
+                "color",
                 "content-editor",
                 "date-picker",
                 "dropdown-custom-post",
@@ -58,8 +389,6 @@
                 "dropdown-post",
                 "email",
                 "file-uploader",
-                "image-checkbox",
-                "image-radio",
                 "image-uploader",
                 "markup",
                 "numeric",
@@ -67,10 +396,7 @@
                 "range",
                 "select",
                 "size",
-                "sortable",
                 "switch",
-                "tagging",
-                "tagging-select",
                 "text",
                 "textarea",
                 "time-picker",
@@ -83,12 +409,13 @@
             "description": "ID of the field (required)",
             "type": "string"
         },
+        "title": {
+            "description": "Title of the field (required)",
+            "type": "string"
+        },
         "description": {
             "description": "Description of the field (optional)",
             "type": "string"
-        },
-        "default": {
-            "description": "Default value of the field (optional)"
         },
         "priority": {
             "description": "Priority of the field (optional)",
@@ -98,23 +425,6 @@
         "section": {
             "description": "ID of the section this field belongs to (optional)",
             "type": "string"
-        },
-        "choices": {
-            "description": "Choices for any type which has a multiple settings e.g. radio, select etc",
-            "type": "array",
-            "minItems": 1,
-            "items": {
-                "required": ["value", "text"],
-                "properties": {
-                    "value": {
-                        "description": "Value to be used in the field. This will be the setting value e.g. true, false for a radio field"
-                    },
-                    "text": {
-                        "description": "Text displayed on the field in the Customizer",
-                        "type": "string"
-                    }
-                }
-            }
         }
     }
 }

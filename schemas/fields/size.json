@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "fields/size.json",
+    "title": "Customizer Framework Size field schema",
+    "description": "Configure an Size field in the Customizer",
+    "type": "object",
+    "required": ["choices"],
+    "properties": {
+        "default": {
+            "$ref": "defs/default-string.json"
+        },
+        "input_attrs": {
+            "$ref": "defs/input-attrs.json"
+        },
+        "units": {
+            "description": "List of valid units e.g. px, em, ex, ch, rem, vw, vh, vmin, vmax, %",
+            "type": "array",
+            "items": {
+                "anyOf": [
+                    {
+                        "type": "string",
+                        "const": "px"
+                    },
+                    {
+                        "type": "string",
+                        "const": "em"
+                    },
+                    {
+                        "type": "string",
+                        "const": "ex"
+                    },
+                    {
+                        "type": "string",
+                        "const": "ch"
+                    },
+                    {
+                        "type": "string",
+                        "const": "rem"
+                    },
+                    {
+                        "type": "string",
+                        "const": "vw"
+                    },
+                    {
+                        "type": "string",
+                        "const": "vh"
+                    },
+                    {
+                        "type": "string",
+                        "const": "vmin"
+                    },
+                    {
+                        "type": "string",
+                        "const": "vmax"
+                    },
+                    {
+                        "type": "string",
+                        "const": "%"
+                    }
+                ]
+            },
+            "default": false
+        }
+    }
+}

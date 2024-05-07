@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "fields/color-picker.json",
+    "title": "Customizer Framework Color Picker field schema",
+    "description": "Configure a Color Picker field in the Customizer",
+    "type": "object",
+    "required": ["format"],
+    "properties": {
+        "default": {
+            "$ref": "defs/default-string.json"
+        },
+        "format": {
+            "description": "Color format to use [hex, rgba]",
+            "type": "string",
+            "enum": ["hex", "rgba"]
+        },
+        "opacity": {
+            "description": "Opacity of the color (number|float|int). Default: 1",
+            "type": "number"
+        }
+    }
+}

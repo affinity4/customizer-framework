@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "fields/markup.json",
+    "title": "Customizer Framework Markup field schema",
+    "description": "Configure a Markup field in the Customizer",
+    "type": "object",
+    "required": ["html"],
+    "properties": {
+        "default": {
+            "$ref": "defs/default-string.json"
+        },
+        "html": {
+            "description": "HTML to be display in Theme Customizer",
+            "type": "string",
+            "default": ""
+        }
+    }
+}

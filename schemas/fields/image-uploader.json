@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "fields/audio-uploader.json",
-    "title": "Customizer Framework Audio Uploader field schema",
-    "description": "Configure an Audio Uploader field in the Customizer",
+    "$id": "fields/image-uploader.json",
+    "title": "Customizer Framework Image Uploader field schema",
+    "description": "Configure an Image Uploader field in the Customizer",
     "type": "object",
     "required": ["extensions"],
     "properties": {
@@ -10,13 +10,14 @@
             "$ref": "defs/default-number.json"
         },
         "extensions": {
-            "description": "Allowed extendsion types e.g. ogg, mp3, m4a, wav",
+            "description": "Allowed extendsion types e.g. png, jpg, jpeg, ico, gif",
             "type": "array",
             "uniqueItems": true,
             "minItems": 1,
+            "additionalItems": false,
             "items": {
                 "type": "string",
-                "enum": ["ogg", "mp3", "m4a", "wav"]
+                "enum": ["png", "jpg", "jpeg", "ico", "gif"]
             }
         }
     }

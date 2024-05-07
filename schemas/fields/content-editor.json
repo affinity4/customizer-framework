@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "fields/content-editor.json",
+    "title": "Customizer Framework Code Editor field schema",
+    "description": "Configure a Code Editor field in the Customizer",
+    "type": "object",
+    "properties": {
+        "default": {
+            "$ref": "defs/default-string.json"
+        },
+        "uploader": {
+            "description": "Set whether this editor can upload content. Adds an 'Upload Media' button above the editor. Type: boolean. Default: false",
+            "type": "boolean",
+            "default": false
+        },
+        "toolbars": {
+            "description": "Set which controls will be in the toolbar. ['bold', 'italic', 'strikethrough', 'bullist', 'numlist', 'blockquote', ...]",
+            "type": "array",
+            "default": false
+        }
+    }
+}

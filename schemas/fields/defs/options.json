@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "fields/defs/options.json",
+    "description": "Set of options to configure min, max, and step for the numeric field",
+    "type": "object",
+    "minProperties": 3,
+    "maxProperties": 3,
+    "required": ["min", "max", "step"],
+    "properties": {
+        "min": {
+            "description": "Minimum the number can be\nType: integer",
+            "type": "integer"
+        },
+        "max": {
+            "description": "Maximum the number can be\nType: integer",
+            "type": "integer"
+        },
+        "step": {
+            "description": "Stepper value used when incrementing/decremeting number, AKA how much to 'step' by",
+            "type": "integer"
+        }
+    }
+}

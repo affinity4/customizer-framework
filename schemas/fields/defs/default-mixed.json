@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "fields/defs/default.json",
+    "title": "Default value",
+    "description": "Default value of the field. Type: mixed (optional)",
+    "type": [
+        "array",
+        "boolean",
+        "integer",
+        "null",
+        "number",
+        "object",
+        "string"
+    ]
+}
