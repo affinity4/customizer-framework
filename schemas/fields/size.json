@@ -4,7 +4,7 @@
     "title": "Customizer Framework Size field schema",
     "description": "Configure an Size field in the Customizer",
     "type": "object",
-    "required": ["choices"],
+    "required": ["units"],
     "properties": {
         "default": {
             "$ref": "defs/default-string.json"
